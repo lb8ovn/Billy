@@ -13,5 +13,8 @@ uClient.close()
 #HTML Parsing, no need to change this
 page_soup = soup(page_html, "html.parser")
 #Grabs what you want. Change HTML type and label
-datapoints = page_soup.findAll("div", {"style":"overflow:auto"})
+headers = ("Tm","RA/G","PtchR","PtchW","Plays","WPA","WPA+","WPA-","aLI","WPA/LI","Clutch","RE24","REW","boLI","RE24/boLI","LevHi","LevMd","LevLo")
+teams = page_soup.findAll("th","class":"left")
+datapoints = page_soup.findAll("td","class":"right")
+	for
 print(datapoints)
